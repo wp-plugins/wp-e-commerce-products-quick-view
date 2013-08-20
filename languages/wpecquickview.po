@@ -1,0 +1,696 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP e-Commerce Catalog Visibility Email inquiry PRO\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-08-20 18:05+0700\n"
+"PO-Revision-Date: 2013-08-20 18:05+0700\n"
+"Last-Translator: Nguyen Tuan <mr.nguyencongtuan@gmail.com>\n"
+"Language-Team: a3rev\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:32
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:200
+#: classes/class-wpec-quick-view-ultimate.php:65
+msgid "QUICKVIEW"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:40
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:458
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:540
+#: classes/class-wpec-quick-view-ultimate.php:83
+msgid "Quick View"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:78
+msgid "0%"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:82
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:106
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:334
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:634
+msgid "px"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:84
+msgid "Solid"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:84
+msgid "Dotted"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:84
+msgid "Dashed"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:84
+msgid "Double"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:86
+msgid "Arial"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:87
+msgid "Verdana"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:88
+msgid "Trebuchet"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:89
+msgid "Georgia"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:90
+msgid "Times New Roman"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:91
+msgid "Tahoma"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:92
+msgid "Palatino"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:93
+msgid "Helvetica*"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:94
+msgid "Calibri*"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:95
+msgid "Myriad Pro*"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:96
+msgid "Lucida"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:97
+msgid "Arial Black"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:98
+msgid "Gill Sans*"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:99
+msgid "Geneva*"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:100
+msgid "Impact"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:101
+msgid "Courier"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:102
+msgid "Century Gothic"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:108
+msgid "Normal"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:108
+msgid "Italic"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:108
+msgid "Bold"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:108
+msgid "Bold/Italic"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:125
+msgid "Settings"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:126
+msgid "Hover Position & Style"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:127
+msgid "Under Image Style"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:128
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:715
+msgid "Fancy Box Pop Up"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:129
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:795
+msgid "Colour Box Pop Up"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:134
+msgid "Global Settings"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:137
+msgid "Enable/Disable"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:139
+msgid "Check to activate the Quick View feature."
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:147
+msgid "Show Button on"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:149
+msgid "Show on mouse hover over image."
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:151
+msgid "Show as button or link text under image."
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:155
+msgid "Popup Tool"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:158
+msgid "Fancybox (Default)"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:159
+msgid "ColorBox"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:165
+msgid "Pop-Up Content"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:168
+msgid "Product Page Content"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:170
+msgid "Check will show Product page excluding site header, sidebar and Footer. Note any plugin that runs its JavaScript just on the product page cannot run because this is not the actual product page url."
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:174
+msgid "Site Product Page"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:176
+msgid "Check will show Product page, site header, sidebar and footer."
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:182
+msgid "House Keeping"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:185
+msgid "Clean up on Deletion"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:188
+msgid "Check this box and if you ever delete this plugin it will completely remove all tables and data it created, leaving no trace it was ever here."
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:195
+msgid "Button Show On Hover"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:198
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:538
+msgid "Button Text"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:200
+msgid "Text for Quick View Button Show On Hover"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:205
+msgid "Button Align"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:211
+msgid "Top"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:212
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:438
+msgid "Center"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:213
+msgid "Bottom"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:223
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:545
+msgid "Button Padding Top/Bottom"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:226
+msgid "(Padding Top/Bottom from Button text to Button border Show On Hover)"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:232
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:552
+msgid "Button Padding Left/Right"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:235
+msgid "(Padding Left/Right from Button text to Button border Show On Hover)"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:241
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:560
+msgid "Background Colour"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:244
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:253
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:262
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:325
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:396
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:412
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:520
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:528
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:563
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:572
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:580
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:625
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:696
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:786
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:845
+msgid "Default"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:250
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:569
+msgid "Background Colour Gradient From"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:259
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:577
+msgid "Background Colour Gradient To"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:267
+msgid "Button Transparency"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:285
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:585
+msgid "Button Border Weight"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:303
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:603
+msgid "Button Border Style"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:322
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:622
+msgid "Button Border Colour"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:331
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:631
+msgid "Border Rounded"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:338
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:638
+msgid "Button Font"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:356
+msgid "Button Size"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:374
+msgid "Button Style"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:393
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:693
+msgid "Button Font Colour"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:401
+msgid "Button Shadow"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:403
+msgid "Activating this setting show shadow for button."
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:409
+msgid "Button Shadow Colour"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:420
+msgid "Button/Hyperlink Show under Image"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:423
+msgid "Button or Hyperlink Type"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:425
+msgid "Hyperlink"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:427
+msgid "Button"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:431
+msgid "Button or Hyperlink Align"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:437
+msgid "Left"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:439
+msgid "Right"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:445
+msgid "Button or Hyperlink magrin"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:448
+msgid "Above/Below"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:453
+msgid "Hyperlink Styling"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:456
+msgid "Hyperlink Text"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:458
+msgid "Text for Hyperlink show under image"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:462
+msgid "Hyperlink Font"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:480
+msgid "Hyperlink Font Size"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:498
+msgid "Hyperlink Font Style"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:517
+msgid "Hyperlink Font Colour"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:525
+msgid "Hyperlink Hover Colour"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:535
+msgid "Button Styling"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:540
+msgid "Text for Button show under image"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:547
+msgid "Padding Top/Bottom from Button text to Button border show under image"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:554
+msgid "Padding Left/Right from Button text to Button border show under image"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:656
+msgid "Button Font Size"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:674
+msgid "Button Font Style"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:702
+msgid "CSS Class"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:705
+msgid "Enter your own button CSS class"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:718
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:798
+msgid "Popup Tool Wide"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:724
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:804
+msgid "50%"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:725
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:805
+msgid "75%"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:726
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:806
+msgid "100%"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:731
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:811
+msgid "Fix Position on Scroll"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:733
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:813
+msgid "Yes - Pop-up stays centered in screen while page scrolls behind it."
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:735
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:815
+msgid "No - Pop-up scrolls up and down with the page."
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:739
+msgid "Open Transition Effect"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:745
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:759
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:825
+msgid "None"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:746
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:760
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:826
+msgid "Fade"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:747
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:761
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:827
+msgid "Elastic"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:748
+msgid "Choose a pop-up opening effect. Default - None."
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:753
+msgid "Close Transistion Effect"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:762
+msgid "Choose a pop-up closing effect. Default - None."
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:768
+msgid "Opening Speed"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:771
+msgid "Milliseconds when open popup"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:775
+msgid "Closing Speed"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:778
+msgid "Milliseconds when close popup"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:783
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:842
+msgid "Background Overlay Colour"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:786
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:845
+msgid "Select a colour or type TRANSPARENT for no colour."
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:819
+msgid "Open & Close Transition Effect"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:828
+msgid "Choose a pop-up opening & closing effect. Default - None"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:834
+msgid "Opening & Closing Speed"
+msgstr ""
+
+#: admin/classes/class-wpec-quick-view-ultimate-admin.php:837
+msgid "Milliseconds when open and close popup."
+msgstr ""
+
+#: classes/class-wpec-quick-view-ultimate.php:185
+msgid "Upgrade to WPEC Quick View Ultimate"
+msgstr ""
+
+#: classes/class-wpec-quick-view-ultimate.php:186
+msgid "<strong>NOTE:</strong> All the functions inside the Yellow border on the plugins admin panel are extra functionality that is activated by upgrading to the Pro version"
+msgstr ""
+
+#: classes/class-wpec-quick-view-ultimate.php:188
+msgid "WPEC Quick View Ultimate"
+msgstr ""
+
+#: classes/class-wpec-quick-view-ultimate.php:189
+msgid "Activates these advanced Features"
+msgstr ""
+
+#: classes/class-wpec-quick-view-ultimate.php:192
+msgid "WYSIWYG Quick View hover button style editor."
+msgstr ""
+
+#: classes/class-wpec-quick-view-ultimate.php:193
+msgid "Show Quick View as a Button or link text under image."
+msgstr ""
+
+#: classes/class-wpec-quick-view-ultimate.php:194
+msgid "Under Image Button or Link text WYSIWYG style editor."
+msgstr ""
+
+#: classes/class-wpec-quick-view-ultimate.php:195
+msgid "Show product page content in pop-up instead of whole site."
+msgstr ""
+
+#: classes/class-wpec-quick-view-ultimate.php:196
+msgid "Optional Colorbox pop-up tool."
+msgstr ""
+
+#: classes/class-wpec-quick-view-ultimate.php:197
+#, php-format
+msgid "Set pop-up wide as a % of screen size in larger screens."
+msgstr ""
+
+#: classes/class-wpec-quick-view-ultimate.php:198
+msgid "Select pop-up open and close effect."
+msgstr ""
+
+#: classes/class-wpec-quick-view-ultimate.php:199
+msgid "Set pop-up opening / closing speed."
+msgstr ""
+
+#: classes/class-wpec-quick-view-ultimate.php:200
+msgid "Set pop-up background overlay colour."
+msgstr ""
+
+#: classes/class-wpec-quick-view-ultimate.php:201
+msgid "Same day priority support and auto updates."
+msgstr ""
+
+#: classes/class-wpec-quick-view-ultimate.php:204
+msgid "View this plugins"
+msgstr ""
+
+#: classes/class-wpec-quick-view-ultimate.php:204
+msgid "documentation"
+msgstr ""
+
+#: classes/class-wpec-quick-view-ultimate.php:205
+msgid "Visit this plugins"
+msgstr ""
+
+#: classes/class-wpec-quick-view-ultimate.php:205
+msgid "support forum"
+msgstr ""
+
+#: classes/class-wpec-quick-view-ultimate.php:206
+msgid "More FREE a3rev WP e-Commerce Plugins"
+msgstr ""
+
+#: classes/class-wpec-quick-view-ultimate.php:209
+msgid "WP e-Commerce Dynamic Gallery"
+msgstr ""
+
+#: classes/class-wpec-quick-view-ultimate.php:210
+msgid "WP e-Commerce Predictive Search"
+msgstr ""
+
+#: classes/class-wpec-quick-view-ultimate.php:211
+msgid "WP e-Commerce Compare Products"
+msgstr ""
+
+#: classes/class-wpec-quick-view-ultimate.php:212
+msgid "WP e-Commerce Catalog Visibility & Email Inquiry"
+msgstr ""
+
+#: classes/class-wpec-quick-view-ultimate.php:213
+msgid "WP e-Commerce Grid View"
+msgstr ""
+
+#: classes/class-wpec-quick-view-ultimate.php:216
+msgid "FREE a3rev WordPress Plugins"
+msgstr ""
+
+#: classes/class-wpec-quick-view-ultimate.php:219
+msgid "Contact Us Page - Contact People"
+msgstr ""
+
+#: classes/class-wpec-quick-view-ultimate.php:220
+msgid "WordPress Email Template"
+msgstr ""
+
+#: classes/class-wpec-quick-view-ultimate.php:221
+msgid "Page View Count"
+msgstr ""
+
+#: classes/class-wpec-quick-view-ultimate.php:232
+msgid "Documentation"
+msgstr ""
+
+#: classes/class-wpec-quick-view-ultimate.php:233
+msgid "Support"
+msgstr ""
+
