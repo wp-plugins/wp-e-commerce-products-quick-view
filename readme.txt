@@ -2,8 +2,8 @@
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: WP e-Commerce, WP e-Commerce Quick View, Quick View, WP e-Commerce Products Quick View.
 Requires at least: 3.5
-Tested up to: 3.6
-Stable tag: 1.0.0
+Tested up to: 3.6.1
+Stable tag: 1.0.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -78,11 +78,15 @@ This plugin has a Pro Version upgrade that adds more functionality to this Free 
 
 * Option to show Product Page Content instead of opening the page url in the pop-up.
 
+= Priority Support =
+
+Please note that we do not provide support for our Lite Version plugins. Hundreds of thousands of plugin downloads has proven that vast majority of the support requests we get have nothing to do with our plugins but are related to bugs in the users theme or other plugins they have installed. We give priority support to those users who purchase a Pro Version license. In this plugins case, we offer a single payment, Lifetime License fee which includes access to and full support from the a3rev support forum.
+
 = Localization =
 
 * English (default) - always included.
 *.po file (wpecquickview.po) in languages folder for translations.
-* If you do a translation for your site please send it to us for inclusion in the plugin language folder. We'll acknowledge your work here. [Go here](http://a3rev.com/contact/) to send your translation files to us.
+* If you do a translation for your site please send it to us for inclusion in the plugin language folder. We'll acknowledge your work here. [Go here](https://a3rev.com/contact-us-page/) to send your translation files to us.
 
 = Plugin Resources =
 
@@ -144,8 +148,26 @@ On any WordPress install that has the WP e-Commerce plugin installed and activat
 
 == Changelog ==
 
+= 1.0.1 - 2013/10/03 =
+* Features :
+	* Upgraded the plugin to the newly developed a3rev admin panel app interface.
+	* Moved admin from WooCommerce settings tab onto the WP e-Commerce Products menu.
+	* New admin UI features check boxes replaced by switches, some dropdowns replaced by sliders.
+	* Replaced colour picker with new WordPress 3.6.0 colour picker (Pro Version feature).
+	* Added choice of 350 Google fonts to the existing 17 websafe fonts in all new single row font editor (Pro Version features).
+	* New Border / Button shadow features. Create shadow external or internal, set wide of shadow (Pro Version Features).
+	* New on page instant previews for Fonts editor, create border and shadow style (Pro Version Features). 
+	* Added intuitive triggers for some settings. When selected corresponding feature settings appear (Pro Version features).
+	* Added set pop up wide from 50% to 100% by increments of + or - 1% using new slider interface (Pro Version features)
+* Fixes :
+	* PayPal as a security feature blocks POST request from checkout in iframe pop-up. Added feature that when /checkout URL is requested in pop-up it auto closes and redirects user to the sites checkout.
+	* Plugins admin script and style not loading in Firefox with SSL on admin. Stripped http// and https// protocols so browser will use the protocol that the page was loaded with.
+
 = 1.0.0 - 2013/08/05 =
 * First working release
 
 
 == Upgrade Notification ==
+
+= 1.0.1 =
+Upgrade now to get the all new admin panel app interface. PayPal checkout in pop-up bug fix and browser protocol bug fix.
