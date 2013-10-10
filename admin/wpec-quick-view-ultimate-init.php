@@ -4,7 +4,7 @@
  */
 update_option('wpec_quick_view_ultimate_plugin', 'wpec_quick_view_ultimate');
 function wpec_quick_view_ultimate_install(){
-	update_option('wpec_quick_view_ultimate_version', '1.0.1');
+	update_option('wpec_quick_view_ultimate_version', '1.0.2');
 	
 	// Set Settings Default from Admin Init
 	global $wpec_qv_admin_init;
@@ -119,5 +119,5 @@ if ( version_compare(get_option('wpec_quick_view_ultimate_version'), '1.0.1' ) =
 	update_option('wpec_quick_view_ultimate_version', '1.0.1');
 }
 
-update_option('wpec_quick_view_ultimate_version', '1.0.1');
+update_option('wpec_quick_view_ultimate_version', '1.0.2');
 ?>
