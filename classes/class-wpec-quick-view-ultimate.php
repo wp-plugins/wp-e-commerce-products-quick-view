@@ -11,6 +11,7 @@
  * quick_view_ultimate_popup()
  * quick_view_ultimate_clicked()
  * quick_view_ultimate_reload_cart()
+ * a3_wp_admin()
  * plugin_extension()
  * plugin_extra_links()
  */
@@ -217,9 +218,13 @@ class WPEC_Quick_View_Ultimate
 		$wpec_qv_admin_init->plugin_extension_end();
 	}
 	
+	public static function a3_wp_admin() {
+		wp_enqueue_style( 'a3rev-wp-admin-style', WPEC_QV_ULTIMATE_CSS_URL . '/a3_wp_admin.css' );
+	}
+	
 	public function plugin_extension() {
 		$html = '';
-		$html .= '<a href="http://a3rev.com/shop/" target="_blank" style="float:right;margin-top:5px; margin-left:10px;" ><img src="'.WPEC_QV_ULTIMATE_IMAGES_URL.'/a3logo.png" /></a>';
+		$html .= '<a href="http://a3rev.com/shop/" target="_blank" style="float:right;margin-top:5px; margin-left:10px;" ><div class="a3-plugin-ui-icon a3-plugin-ui-a3-rev-logo"></div></a>';
 		$html .= '<h3>'.__('Upgrade to WPEC Quick View Ultimate', 'wpecquickview').'</h3>';
 		$html .= '<p>'.__("<strong>NOTE:</strong> All the functions inside the Yellow border on the plugins admin panel are extra functionality that is activated by upgrading to the Pro version", 'wpecquickview').':</p>';
 		$html .= '<p>';

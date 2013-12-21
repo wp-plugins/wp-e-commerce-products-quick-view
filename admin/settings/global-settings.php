@@ -131,7 +131,7 @@ class WPEC_QV_Global_Settings extends WPEC_QV_Admin_UI
 	/* Process when clean on deletion option is un selected */
 	/*-----------------------------------------------------------------------------------*/
 	public function clean_on_deletion() {
-		if ( get_option( 'wpec_quick_view_ultimate_clean_on_deletion' ) == 0  )  {
+		if ( ( isset( $_POST['bt_save_settings'] ) || isset( $_POST['bt_reset_settings'] ) ) && get_option( 'wpec_quick_view_lite_clean_on_deletion' ) == 0  )  {
 			$uninstallable_plugins = (array) get_option('uninstall_plugins');
 			unset($uninstallable_plugins[WPEC_QV_ULTIMATE_NAME]);
 			update_option('uninstall_plugins', $uninstallable_plugins);
@@ -302,7 +302,7 @@ class WPEC_QV_Global_Settings extends WPEC_QV_Admin_UI
 			array(  
 				'name' 		=> __( 'Clean up on Deletion', 'wpecquickview' ),
 				'desc' 		=> __( "On deletion (not deactivate) the plugin will completely remove all tables and data it created, leaving no trace it was ever here.", 'wpecquickview' ),
-				'id' 		=> 'wpec_quick_view_ultimate_clean_on_deletion',
+				'id' 		=> 'wpec_quick_view_lite_clean_on_deletion',
 				'type' 		=> 'onoff_checkbox',
 				'default'	=> '1',
 				'free_version'		=> true,
