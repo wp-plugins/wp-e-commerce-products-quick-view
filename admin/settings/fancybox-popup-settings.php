@@ -197,16 +197,6 @@ class WPEC_QV_Fancybox_Popup_Settings extends WPEC_QV_Admin_UI
                 'type' 		=> 'heading',
            	),
 			array(  
-				'name' 		=> __( "Popup Tool Wide", 'wpecquickview' ),
-				'id' 		=> 'wpec_quick_view_ultimate_fancybox_popup_tool_wide',
-				'desc'		=> '%',
-				'type' 		=> 'slider',
-				'default'	=> 75,
-				'min'		=> 50,
-				'max'		=> 100,
-				'increment'	=> 1
-			),
-			array(  
 				'name' 		=> __( "Fix Position on Scroll", 'wpecquickview' ),
 				'id' 		=> 'wpec_quick_view_ultimate_fancybox_center_on_scroll',
 				'type' 		=> 'onoff_radio',

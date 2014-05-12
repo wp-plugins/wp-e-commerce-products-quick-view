@@ -14,7 +14,7 @@ class WPEC_Quick_View_Ultimate_Style
 		//construct
 	}
 	
-	public function button_style_show_on_hover(){
+	public static function button_style_show_on_hover(){
 		$wpec_quick_view_ultimate_on_hover_bt_alink = get_option( 'wpec_quick_view_ultimate_on_hover_bt_alink' );
 		
 		?>

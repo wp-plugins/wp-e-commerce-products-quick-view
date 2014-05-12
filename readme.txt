@@ -1,9 +1,9 @@
 === WP e-Commerce Products Quick View ===
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: WP e-Commerce, WP e-Commerce Quick View, Quick View, WP e-Commerce Products Quick View.
-Requires at least: 3.5
-Tested up to: 3.8.0
-Stable tag: 1.0.3
+Requires at least: 3.7
+Tested up to: 3.9.1
+Stable tag: 1.0.4
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -47,7 +47,7 @@ Products Quick View works when you have the grid view feature activated in the W
 
 = Mobile Responsive App style admin interface =
 
-Like WordPress we believe that a3rev plugin users should be able to configure and tweak our plugins settings while on the go, right from their mobile or tablet. This plugins features an app style admin interface with Switches, Sliders and a smart interface that hides associated settings when a feature is not turned ON.
+Like WordPress we believe that a3rev plugin users should be able to configure and tweak our plugins settings while on the go, right from their mobile or tablet. 
 
 * 100% compatible with WordPress v3.8.0 admin interface.
 * Backward compatibility to WordPress v3.5.0
@@ -56,15 +56,29 @@ Like WordPress we believe that a3rev plugin users should be able to configure an
 
 = Lite & Pro Version Admin Interface =
 
-All a3rev Lite Version plugins have exactly the same admin interface as the Pro Version. Pro Version features and settings are easy to spot on the admin dashboard as they are inside of a Yellow border. The Pro Version settings are all active on the admin panels so they can be used to get a great idea of how they work and what is available BUT the settings do not save when changes are saved and hence are not applied to the front end. Upgrading to the Pro version activates all the Pro version Features and Settings and removes the Yellow side bar and borders.
+* All a3rev Lite Version plugins have exactly the same admin interface as the Pro Version. 
+* Pro Version features and settings are inside of a Yellow border. 
+* The Pro Version settings are all active on the admin panels But do not save and are not applied to the front end. 
+* Upgrading to the Pro version activates all the Pro version Features and Settings and removes the Yellow side bar and borders.
 
 = Lite Version Support =
 
-As a Lite Version user please post all support requests to the plugins WordPress Support forum. We do not watch that forum and posting there you will be relying on another user for support, not an a3rev team member. Upgrading to a Pro Version Licence gives 'write' access to the a3rev support forum and hence Lifetime priority support as part of the License.
+* As a Lite Version user please post all support requests to the plugins WordPress Support forum. 
+* We do not watch that forum and posting there you will be relying on another user for support, not an a3rev team member. 
+* Upgrading to a Pro Version Licence gives 'write' access to the a3rev support forum.
 
 = Pro Version Upgrade =
 
 This plugin has a Pro Version upgrade that adds more functionality to this Free version. You will see all of the available upgrade features on the plugins admin panel, in the Yellow sidebar. Those Pro features include:
+
+= Free Trial Evaluation =
+
+* Try the [full Pro Version for free](http://a3rev.com/shop/wp-e-commerce-quick-view-ultimate/).
+* a3rev try before you buy
+* No credit card required. 
+* 60 day no qusetions asked money back guarantee on all licenses upgraded from trail to Lifetime Licenses.
+* Add additional sites to a Lifetime License when you require them at a 30% discount.
+* Immediate access to developer support from the plugins a3rev support forum.
 
 = Hover Button Advanced Point and Click Styling =
 
@@ -84,7 +98,6 @@ This plugin has a Pro Version upgrade that adds more functionality to this Free 
 = Advanced Pop-up Controls =
 
 * Option to use Colorbox pop-up tool.
-* Set pop-up wide as a % of screen size in larger screens.
 * Select pop-up open and close transition effect.
 * Set pop-up opening / closing speed.
 * Set pop-up background overlay colour with WordPress colour picker.
@@ -94,10 +107,6 @@ This plugin has a Pro Version upgrade that adds more functionality to this Free 
 = Product Page Content Option =
 
 * Option to show Product Page Content instead of opening the page url in the pop-up.
-
-= Priority Support =
-
-Please note that we do not provide support for our Lite Version plugins. Hundreds of thousands of plugin downloads has proven that vast majority of the support requests we get have nothing to do with our plugins but are related to bugs in the users theme or other plugins they have installed. We give priority support to those users who purchase a Pro Version license. In this plugins case, we offer a single payment, Lifetime License fee which includes access to and full support from the a3rev support forum.
 
 = Localization =
 
@@ -115,8 +124,8 @@ Please note that we do not provide support for our Lite Version plugins. Hundred
 
 = Minimum Requirements =
 
-* WordPress 3.5.2
-* WooCommerce v2.0 and later.
+* WordPress 3.7
+* WP e-Commerce 3.8.0
 * PHP version 5.2.4 or greater
 * MySQL version 5.0 or greater
  
@@ -149,7 +158,6 @@ The manual installation method involves downloading our plugin and uploading it 
 
 7. Colorbox Pop-up - Us WYSIWYG settings if using this pop-up tool.
 
-
 == Frequently Asked Questions ==
 
 = When can I use this plugin? =
@@ -161,8 +169,21 @@ On any WordPress install that has the WP e-Commerce plugin installed and activat
 
 1. Quick view on a product page as it shows on a widescreen.
 
-
 == Changelog ==
+
+= 1.0.4 - 2014/05/12 =
+* Tweak - Removed dynamic pop-up wide setting and replaced with static pop-up max wide. 
+* Tweak - Pop-up tools wide under 520px shows 100% wide of the screen for mobiles in portrait or landscape
+* Tweak - Tested for full compatibility with WP e-Commerce Version 3.8.14.1
+* Tweak - Tested for compatibility with WordPress version 3.9.1
+* Tweak - Launched Plugin Pro Version Trail License for Free Trail.
+* Tweak - Updated Framework help text font for consistency.
+* Tweak - Added remove_all_filters('mce_external_plugins'); before call to wp_editor to remove extension scripts from other plugins.
+* Tweak - Full WP_DEBUG ran, all uncaught exceptions, errors, warnings, notices and php strict standard notices fixed.
+* Tweak - Added PHP Public Static to functions in Class. Done so that Public Static warnings don't show in DE_BUG mode.
+* Tweak - Updated the plugins admin panel Yellow sidebar content.
+* Fix - Pop-up not opening in WPEC 3.8.14. Added wp_localize_script( 'wp-e-commerce', 'wpsc_vars', wpsc_javascript_localizations() );
+* Fix - Distorted pop-up display in mobile phone portrait view with new pop-up static max wide. 
 
 = 1.0.3 - 2013/12/21 =
 * Feature - a3rev Plugin Framework admin interface upgraded to 100% Compatibility with WordPress v3.8.0 with backward compatibility.
@@ -195,7 +216,10 @@ On any WordPress install that has the WP e-Commerce plugin installed and activat
 = 1.0.0 - 2013/08/05 =
 * First working release
 
-== Upgrade Notification ==
+== Upgrade Notifice ==
+
+= 1.0.4 =
+Upgrade for full rework on Quick View pop-up. 2 bug fixes and 8 code Tweaks. Full backward compatibility with new WP e-Commerce version 3.8.14.1 and WordPress 3.9.1
 
 = 1.0.3 =
 Upgrade now for full a3rev Plugin Framework compatibility with WordPress version 3.8.0 and backwards. New admin interface full mobile and tablet responsive display.
