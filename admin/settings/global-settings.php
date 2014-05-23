@@ -271,6 +271,7 @@ class WPEC_QV_Global_Settings extends WPEC_QV_Admin_UI
 				'name' 		=> __( 'Site Product Page', 'wpecquickview' ),
 				'id' 		=> 'wpec_quick_view_ultimate_popup_content',
 				'type' 		=> 'onoff_radio',
+				'default'	=> 'full_page',
 				'onoff_options' => array(
 					array(
 						'val' 				=> 'full_page',
@@ -284,7 +285,7 @@ class WPEC_QV_Global_Settings extends WPEC_QV_Admin_UI
 				'name' 		=> __( "Product Page Content", 'wpecquickview' ),
 				'id' 		=> 'wpec_quick_view_ultimate_popup_content',
 				'type' 		=> 'onoff_radio',
-				'default'	=> 'product_page',
+				'default'	=> 'full_page',
 				'onoff_options' => array(
 					array(
 						'val' 				=> 'product_page',
