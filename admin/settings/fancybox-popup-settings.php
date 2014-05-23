@@ -197,6 +197,26 @@ class WPEC_QV_Fancybox_Popup_Settings extends WPEC_QV_Admin_UI
                 'type' 		=> 'heading',
            	),
 			array(  
+				'name' 		=> __( 'Pop-up Maximum Width', 'wpecquickview' ),
+				'id' 		=> 'wpec_quick_view_ultimate_fancybox_popup_width',
+				'desc'		=> 'px',
+				'type' 		=> 'slider',
+				'default'	=> 700,
+				'min'		=> 520,
+				'max'		=> 800,
+				'increment'	=> 10
+			),
+			array(  
+				'name' 		=> __( 'Pop-up Maximum Height', 'wpecquickview' ),
+				'id' 		=> 'wpec_quick_view_ultimate_fancybox_popup_height',
+				'desc'		=> 'px',
+				'type' 		=> 'slider',
+				'default'	=> 500,
+				'min'		=> 300,
+				'max'		=> 500,
+				'increment'	=> 10
+			),
+			array(  
 				'name' 		=> __( "Fix Position on Scroll", 'wpecquickview' ),
 				'id' 		=> 'wpec_quick_view_ultimate_fancybox_center_on_scroll',
 				'type' 		=> 'onoff_radio',

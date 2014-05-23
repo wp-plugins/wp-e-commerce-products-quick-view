@@ -23,6 +23,10 @@ class WPEC_Quick_View_Ultimate
 	}
 	
 	public function init () {
+		// Include google fonts into header
+		add_action( 'wp_head', array( $this, 'add_google_fonts'), 11 );
+		
+		
 		add_action( 'wp_footer', array( $this,'wpec_add_quick_view_button_default_template' ) );
 		add_action( 'wp_footer', array( $this,'wpec_quick_view_ultimate_wp_enqueue_script' ),11 );
 		add_action( 'wp_footer', array( $this,'wpec_quick_view_ultimate_wp_enqueue_style' ),11 );
@@ -47,6 +51,17 @@ class WPEC_Quick_View_Ultimate
 		}
 	}
 	
+	public function add_google_fonts() {
+		global $wpec_qv_fonts_face;
+		$wpec_quick_view_ultimate_on_hover_bt_font = get_option( 'wpec_quick_view_ultimate_on_hover_bt_font' );
+		$wpec_quick_view_ultimate_under_image_link_font = get_option( 'wpec_quick_view_ultimate_under_image_link_font' );
+		$wpec_quick_view_ultimate_under_image_bt_font = get_option( 'wpec_quick_view_ultimate_under_image_bt_font' );
+		
+		$google_fonts = array( $wpec_quick_view_ultimate_on_hover_bt_font['face'], $wpec_quick_view_ultimate_under_image_link_font['face'], $wpec_quick_view_ultimate_under_image_bt_font['face'] );
+		
+		$wpec_qv_fonts_face->generate_google_webfonts( $google_fonts );
+	}
+	
 	public function redirect_to_checkout_page_from_popup() {
 		if ( get_option( 'checkout_url' ) == get_permalink() ) {
 	?>
@@ -61,9 +76,11 @@ class WPEC_Quick_View_Ultimate
 	
 	public function wpec_quick_view_ultimate_wp_enqueue_script(){
 		$wpec_quick_view_ultimate_enable = get_option('wpec_quick_view_ultimate_enable');
+		$wpec_quick_view_ultimate_type = get_option('wpec_quick_view_ultimate_type');
 		$do_this = false;
 		if( $wpec_quick_view_ultimate_enable == '1' ) $do_this = true;
 		if( !$do_this ) return;
+		if( $wpec_quick_view_ultimate_type != 'hover' ) return;
 		wp_enqueue_script('jquery');
 		wp_register_script( 'wpec-quick-view-script', WPEC_QV_ULTIMATE_JS_URL.'/quick_view_ultimate.js');
 		wp_enqueue_script( 'wpec-quick-view-script' );
@@ -75,18 +92,21 @@ class WPEC_Quick_View_Ultimate
 		if( $wpec_quick_view_ultimate_enable == '1' ) $do_this = true;
 		if( !$do_this ) return;
 		wp_enqueue_style( 'wpec-quick-view-css', WPEC_QV_ULTIMATE_CSS_URL.'/style.css');
+		WPEC_Quick_View_Ultimate_Style::button_style_under_image();
 		WPEC_Quick_View_Ultimate_Style::button_style_show_on_hover();
 	}
 	
 	public function wpec_add_quick_view_button_default_template(){
 		global $wpsc_gc_view_mode;
 		$wpec_quick_view_ultimate_enable = get_option('wpec_quick_view_ultimate_enable');
+		$wpec_quick_view_ultimate_type = get_option('wpec_quick_view_ultimate_type');
 		$do_this = false;
 		
 		if( $wpec_quick_view_ultimate_enable == '1' ) $do_this = true;
 		
 		if( !$do_this ) return;
 
+		if ( $wpec_quick_view_ultimate_type == 'hover' ){
 		?>
 		<script type="text/javascript">
 		var bt_position = '<?php echo get_option('wpec_quick_view_ultimate_on_hover_bt_alink');?>';
@@ -108,10 +128,17 @@ class WPEC_Quick_View_Ultimate
 				<?php
 				}elseif($wpsc_gc_view_mode == 'list'){
 					$wpec_quick_view_ultimate_popup_tool = 'fancybox';
-					$wpec_quick_view_ultimate_under_image_link_text = __( 'Quick View', 'wpecquickview' );
+					$wpec_quick_view_ultimate_under_image_bt_type = get_option( 'wpec_quick_view_ultimate_under_image_bt_type' );
+					$wpec_quick_view_ultimate_under_image_link_text = esc_attr( stripslashes( get_option('wpec_quick_view_ultimate_under_image_link_text', __( 'Quick View', 'wpecquickview' ) ) ) );
+					$wpec_quick_view_ultimate_under_image_bt_text = esc_attr( stripslashes( get_option('wpec_quick_view_ultimate_under_image_bt_text', __( 'Quick View', 'wpecquickview' ) ) ) );
+					$wpec_quick_view_ultimate_under_image_bt_class = get_option( 'wpec_quick_view_ultimate_under_image_bt_class' );
 					$link_text = $wpec_quick_view_ultimate_under_image_link_text;
 					$class = $wpec_quick_view_ultimate_popup_tool.' wpec_quick_view_ultimate_under_link wpec_quick_view_ultimate_click';
-					
+					if( $wpec_quick_view_ultimate_under_image_bt_type == 'button' ){
+						$link_text = $wpec_quick_view_ultimate_under_image_bt_text;
+						$class = $wpec_quick_view_ultimate_popup_tool.' wpec_quick_view_ultimate_under_button wpec_quick_view_ultimate_click';
+						if( trim($wpec_quick_view_ultimate_under_image_bt_class) != '' ){$class .= ' '.trim($wpec_quick_view_ultimate_under_image_bt_class);}
+					}
 				?>
 				var bt_text = '<?php echo $link_text; ?>';
 				jQuery('tr.product_view_'+product_id).append('<td class="bt_quick_view"><div style="clear:both;"></div><div class="wpec_quick_view_ultimate_container_under"><div class="wpec_quick_view_ultimate_content_under"><a class="<?php echo $class;?>" id="'+product_id+'" href="'+jQuery(this).attr('action')+'" data-link="'+jQuery(this).attr('action')+'">'+bt_text+'</a></div></div><div style="clear:both;"></div></td>');
@@ -126,6 +153,52 @@ class WPEC_Quick_View_Ultimate
 		});
         </script>
 		<?php
+		}else{
+		$wpec_quick_view_ultimate_popup_tool = 'fancybox';
+		$wpec_quick_view_ultimate_under_image_bt_type = get_option( 'wpec_quick_view_ultimate_under_image_bt_type' );
+		$wpec_quick_view_ultimate_under_image_link_text = esc_attr( stripslashes( get_option('wpec_quick_view_ultimate_under_image_link_text', __( 'Quick View', 'wpecquickview' ) ) ) );
+		$wpec_quick_view_ultimate_under_image_bt_text = esc_attr( stripslashes( get_option('wpec_quick_view_ultimate_under_image_bt_text', __( 'Quick View', 'wpecquickview' ) ) ) );
+		$wpec_quick_view_ultimate_under_image_bt_class = esc_attr( stripslashes( get_option( 'wpec_quick_view_ultimate_under_image_bt_class' ) ) );
+		$link_text = $wpec_quick_view_ultimate_under_image_link_text;
+		$class = $wpec_quick_view_ultimate_popup_tool.' wpec_quick_view_ultimate_under_link wpec_quick_view_ultimate_click';
+		if( $wpec_quick_view_ultimate_under_image_bt_type == 'button' ){
+			$link_text = $wpec_quick_view_ultimate_under_image_bt_text;
+			$class = $wpec_quick_view_ultimate_popup_tool.' wpec_quick_view_ultimate_under_button wpec_quick_view_ultimate_click';
+			if( trim($wpec_quick_view_ultimate_under_image_bt_class) != '' ){$class .= ' '.trim($wpec_quick_view_ultimate_under_image_bt_class);}
+		}
+		?>
+		<script type="text/javascript">
+		var bt_text = '<?php echo $link_text; ?>';
+		var popup_tool = '<?php echo get_option('wpec_quick_view_ultimate_popup_tool');?>';
+        jQuery(window).load(function(){
+			jQuery( document ).find ( 'form.product_form' ).each(function(){
+				product_id = jQuery('input[name="product_id"]',this).val();
+				image_element_id = 'product_image_'+product_id;
+				jQuery( "#"+image_element_id).data("product_id", product_id );
+				parent_container = jQuery(this).parents('div.product_view_'+product_id);
+				parent_container.addClass('product_view_item');
+				jQuery( "#"+image_element_id).parent('a').parent('div').addClass('wpec_image');
+				var bt_html = '<div style="clear:both;"></div><div class="wpec_quick_view_ultimate_container_under"><div class="wpec_quick_view_ultimate_content_under"><a class="<?php echo $class;?>" id="'+product_id+'" href="'+jQuery(this).attr('action')+'" data-link="'+jQuery(this).attr('action')+'">'+bt_text+'</a></div></div><div style="clear:both;"></div>';
+				<?php
+				if($wpsc_gc_view_mode == 'grid'){
+				?>
+				parent_container.find('.wpec_image').append(bt_html);
+				<?php
+				}elseif($wpsc_gc_view_mode == 'list'){
+				?>
+				jQuery('tr.product_view_'+product_id).append('<td class="bt_quick_view">'+bt_html+'</td>');
+				<?php
+				}else{
+				?>
+				parent_container.find('.wpec_image').append(bt_html);
+				<?php
+				}
+				?>
+			});
+		});
+        </script>
+		<?php
+		}
 	}
 	
 	public function wpec_quick_view_ultimate_popup(){
@@ -172,11 +245,18 @@ class WPEC_Quick_View_Ultimate
 				var product_url = jQuery(this).attr('data-link');
 				
 				var obj = jQuery(this);
+				var auto_Dimensions = true;
+				
+				// detect iOS to fix scroll for iframe on fancybox
+				var iOS = ( navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false );
+				if ( iOS ) {
+					jQuery('#fancybox-content').attr( "style", "overflow-y: auto !important; -webkit-overflow-scrolling: touch !important;" );
+				}
 				var url = product_url;
 				
-				var popup_wide = 600;
-				if ( wpec_qv_getWidth()  <= 568 ) { 
-					popup_wide = '95%'; 
+				var popup_wide = 700;
+				if ( wpec_qv_getWidth()  <= 600 ) { 
+					popup_wide = '90%'; 
 				}
 				
 				jQuery.fancybox({
@@ -191,11 +271,11 @@ class WPEC_Quick_View_Ultimate
 					speedOut : <?php echo $wpec_quick_view_ultimate_fancybox_speed_out;?>,
 					width: popup_wide,
 					autoScale: true,
-					height: 460,
+					height: 500,
 					margin: 0,
 					padding: 10,
-					maxWidth: "95%",
-					maxHeight: "80%",
+					maxWidth: "90%",
+					maxHeight: "90%",
 					autoDimensions: true,
 					overlayColor: '<?php echo $wpec_quick_view_ultimate_fancybox_overlay_color;?>',
 					showCloseButton : true,
@@ -238,6 +318,10 @@ class WPEC_Quick_View_Ultimate
 	public static function a3_wp_admin() {
 		wp_enqueue_style( 'a3rev-wp-admin-style', WPEC_QV_ULTIMATE_CSS_URL . '/a3_wp_admin.css' );
 	}
+
+	public static function admin_sidebar_menu_css() {
+		wp_enqueue_style( 'a3rev-wpec-qv-admin-sidebar-menu-style', WPEC_QV_ULTIMATE_CSS_URL . '/admin_sidebar_menu.css' );
+	}
 	
 	public function plugin_extension() {
 		$html = '';
@@ -254,16 +338,16 @@ class WPEC_Quick_View_Ultimate
 		$html .= '<div><strong>'.__('Activates these advanced Features', 'wpecquickview').':</strong></div>';
 		$html .= '<p>';
 		$html .= '<ul style="padding-left:10px;">';
-		$html .= '<li>1. '.__("WYSIWYG Quick View hover button style editor.", 'wpecquickview').'</li>';
-		$html .= '<li>2. '.__("Show Quick View as a Button or link text under image.", 'wpecquickview').'</li>';
-		$html .= '<li>3. '.__('Under Image Button or Link text WYSIWYG style editor.', 'wpecquickview').'</li>';
-		$html .= '<li>4. '.__('Show product page content in pop-up instead of whole site.', 'wpecquickview').'</li>';
-		$html .= '<li>5. '.__('Optional Colorbox pop-up tool.', 'wpecquickview').'</li>';
-		$html .= '<li>6. '.__('Set pop-up wide as a % of screen size in larger screens.', 'wpecquickview').'</li>';
-		$html .= '<li>7. '.__('Select pop-up open and close effect.', 'wpecquickview').'</li>';
-		$html .= '<li>8. '.__("Set pop-up opening / closing speed.", 'wpecquickview').'</li>';
-		$html .= '<li>9. '.__("Set pop-up background overlay colour.", 'wpecquickview').'</li>';
-		$html .= '<li>10. '.__("Same day priority support and auto updates.", 'wpecquickview').'</li>';
+		$html .= '<li>1. '.__("Quick View Custom Template for pop-up.", 'wpecquickview').'</li>';
+		$html .= '<li>2. '.__("Custom Template Dynamic Product Gallery.", 'wpecquickview').'</li>';
+		$html .= '<li>3. '.__('Custom Template Next &gt; &lt; Previous Product feature.', 'wpecquickview').'</li>';
+		$html .= '<li>4. '.__('Custom Template Style and layout settings.', 'wpecquickview').'</li>';
+		$html .= '<li>5. '.__('Optional Fancybox | Colorbox pop-up tool.', 'wpecquickview').'</li>';
+		$html .= '<li>6. '.__('Select pop-up open and close effect.', 'wpecquickview').'</li>';
+		$html .= '<li>7. '.__('Set pop-up opening / closing speed.', 'wpecquickview').'</li>';
+		$html .= '<li>8. '.__("Set pop-up background overlay colour.", 'wpecquickview').'</li>';
+		$html .= '<li>9. '.__("Access to support from developers.", 'wpecquickview').'</li>';
+		$html .= '<li>10. '.__("Lifetime upgrades and maintenence.", 'wpecquickview').'</li>';
 		$html .= '</ul>';
 		$html .= '</p>';
 		$html .= '<h3>'.__('View this plugins', 'wpecquickview').' <a href="http://docs.a3rev.com/user-guides/plugins-extensions/wp-e-commerce/wpec-quick-view/" target="_blank">'.__('documentation', 'wpecquickview').'</a></h3>';

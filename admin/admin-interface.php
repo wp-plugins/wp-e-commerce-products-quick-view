@@ -176,14 +176,14 @@ class WPEC_QV_Admin_Interface extends WPEC_QV_Admin_UI
 	/*-----------------------------------------------------------------------------------*/
 	public function get_border_styles() {
 		$border_styles = array (
-			'solid'				=> __( 'Solid', 'wc_email_inquiry' ),
-			'double'			=> __( 'Double', 'wc_email_inquiry' ),
-			'dashed'			=> __( 'Dashed', 'wc_email_inquiry' ),
-			'dotted'			=> __( 'Dotted', 'wc_email_inquiry' ),
-			'groove'			=> __( 'Groove', 'wc_email_inquiry' ),
-			'ridge'				=> __( 'Ridge', 'wc_email_inquiry' ),
-			'inset'				=> __( 'Inset', 'wc_email_inquiry' ),
-			'outset'			=> __( 'Outset', 'wc_email_inquiry' ),
+			'solid'				=> __( 'Solid', 'wpecquickview' ),
+			'double'			=> __( 'Double', 'wpecquickview' ),
+			'dashed'			=> __( 'Dashed', 'wpecquickview' ),
+			'dotted'			=> __( 'Dotted', 'wpecquickview' ),
+			'groove'			=> __( 'Groove', 'wpecquickview' ),
+			'ridge'				=> __( 'Ridge', 'wpecquickview' ),
+			'inset'				=> __( 'Inset', 'wpecquickview' ),
+			'outset'			=> __( 'Outset', 'wpecquickview' ),
 		);
 		return apply_filters( $this->plugin_name . '_border_styles', $border_styles );
 	}
@@ -1983,7 +1983,7 @@ class WPEC_QV_Admin_Interface extends WPEC_QV_Admin_UI
 								/> 
                                 
                                 <!-- Preview Button -->
-                               	<div class="a3rev-ui-settings-preview"><a href="#" class="a3rev-ui-border-preview-button a3rev-ui-settings-preview-button button submit-button" title="<?php _e( 'Preview your customized border settings', 'wc_email_inquiry'); ?>"><span>&nbsp;</span></a></div>
+                               	<div class="a3rev-ui-settings-preview"><a href="#" class="a3rev-ui-border-preview-button a3rev-ui-settings-preview-button button submit-button" title="<?php _e( 'Preview your customized border settings', 'wpecquickview'); ?>"><span>&nbsp;</span></a></div>
                                
                                	<!-- Border Rounded Value -->
 								<div class="a3rev-ui-border-corner-value-container">

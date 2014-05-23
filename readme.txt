@@ -3,7 +3,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: WP e-Commerce, WP e-Commerce Quick View, Quick View, WP e-Commerce Products Quick View.
 Requires at least: 3.7
 Tested up to: 3.9.1
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -26,33 +26,46 @@ It is quick easy and incredibly convenient for your customers and will create mo
 
 We wanted our customers to have a true supermarket shopping experience. Other Quick View plugins only enable users to use the cart meta (select options and add to cart) in a pop-up.
 
-= Quick View Ultimate Features =
+= Quick View Features =
 
 * Works on any theme.
 * Pop-up opens full page content.
 * Fully mobile responsive - if your theme is responsive it opens in its true responsive dimensions within the pop-up.
-* Quick View button shows on mouse over the image.
+* Show Quick View as a button or hyperlink text (fully customizable without writing any code)
+* All product page features added by plugins work within the pop-up.
+* Show Quick View on hover over image or show as button or linked text under the image.
+* Fully cross browser compliant including IE8 to IE11.
+* Mobile device optimized - all tablets and phones
+
+
+= Grid View Compatibility =
+
+* Products Quick View works when you have the grid view feature activated in the WP e-Commerce plugin. 
+* There are 2 plugins that activate Grid View in WP e-Commerce. Our plugin [WP e-Commerce Grid View](http://wordpress.org/plugins/wp-e-commerce-grid-view/) and the getshopped.org [Gold Cart plugin](http://getshopped.org/premium-upgrades/premium-plugin/gold-cart-plugin/). 
+* Products Quick View does not work with list view.
+
+= Hover Button point and click Styling =
+
+* Create the perfect Quick View button style to match your site with the point click settings.
+* Button transparency selector.
+* Do it all by point click from the admin panel with touching the code.
+* Change it any time you like.
+
+= Show Quick View under the Image =
+
+* Option to show Quick View as a Button or Hyper linked text under the product image.
+* When placed under the image Quick View is visible all of the time.
+* a3rev Button creator, for creating the perfect style without touching the theme code.
+* a3rev Button style transparency setting.
+* a3rev Hyperlink text creator - Simple point click settings to create an eye catching clickable link.
 * Quick View button has 3 Positional settings Top, Center or bottom of the image.
+
+= Mobile Responsive Quick View Pop-up =
+
 * Fancybox pop-up tool - can't be blocked by browser pop-up settings.
 * Pop-up opens in 0.300 of a second and closes instantly.
 * SEO tracking - Your analytics tracking code e.g. Google records every view.
 * Add to Cart , View Cart all work within the pop-up.
-* All product page features add by plugins work within the pop-up. 
-* Fully cross browser compliant including IE7 to IE10.
-* Mobile device optimized - all tablets and phones
-
-= Grid View Compatibility =
-
-Products Quick View works when you have the grid view feature activated in the WP e-Commerce plugin. There are 2 plugins that activate Grid View in WP e-Commerce. Our plugin [WP e-Commerce Grid View](http://wordpress.org/plugins/wp-e-commerce-grid-view/) and the getshopped.org [Gold Cart plugin](http://getshopped.org/premium-upgrades/premium-plugin/gold-cart-plugin/). Products Quick View does not work with list view.
-
-= Mobile Responsive App style admin interface =
-
-Like WordPress we believe that a3rev plugin users should be able to configure and tweak our plugins settings while on the go, right from their mobile or tablet. 
-
-* 100% compatible with WordPress v3.8.0 admin interface.
-* Backward compatibility to WordPress v3.5.0
-* App style admin interface.
-* Admin app interface is fully mobile and tablet responsive.
 
 = Lite & Pro Version Admin Interface =
 
@@ -79,28 +92,30 @@ This plugin has a Pro Version upgrade that adds more functionality to this Free 
 * 60 day no qusetions asked money back guarantee on all licenses upgraded from trail to Lifetime Licenses.
 * Add additional sites to a Lifetime License when you require them at a 30% discount.
 * Immediate access to developer support from the plugins a3rev support forum.
+ 
+= Fully Customizable Pop-up Template =
 
-= Hover Button Advanced Point and Click Styling =
+This feature allows you to create a Quick View Pop-up like no other. Features:
 
-* Create the perfect Quick View button style to match your site with the a3rev point and click style settings.
-* Button transparency selector. 
-* Do it all by point click from the admin panel with touching the code.
-* Change it any time you like.
-
-= Show Quick View under the Image =
-
-* Option to show Quick View as a Button or Hyper linked text under the product image.
-* When placed under the image Quick View is visible all of the time and does not rely on the user mousing over or touching the listing to show.
-* Advanced Point & Click button creator with transparency setting.
-* Point and Click Button creator and Hyperlink text editors - Simple point click settings to create an eye catching button
-* Padding settings above and below Button / Link text allow you to style how Quick View is positioned under the image on your theme.
+* Fully Customizable pop up content template (no coding what so ever)
+* Next> and <Previous Product Scroll - scroll through products right from the pop-up.
+* Next> and <Previous Scroll works with all WP e-Commerce Product Sort Types.
+* Next> and <Previous Scroll works on Shop page and all product category pages.
+* Template has its own Fully customizable Dynamic Image gallery
+* Dynamic Gallery automatically gets all images uploaded to the product
+* Set Gallery Left to show aligned Left or Right in the pop-up.
+* Gallery has 5 different transition effect types to choose from.
+* Gallery - set effect transition timing.
+* Full template style customizing settings e.g background colour, Title font ect.
+* a3rev Button creator for creating any style for the buttons.
+* Control over what shows in the template e.g Prices, Add to Cart Button etc.
 
 = Advanced Pop-up Controls =
 
 * Option to use Colorbox pop-up tool.
 * Select pop-up open and close transition effect.
 * Set pop-up opening / closing speed.
-* Set pop-up background overlay colour with WordPress colour picker.
+* Set pop-up background overlay colour with WYSIWYG colour picker.
 * Fix pop-up or allow it to scroll with the screen content
 * Same day priority Pro License support and auto updates from the a3API.
 
@@ -144,19 +159,11 @@ The manual installation method involves downloading our plugin and uploading it 
  
 == Usage ==
 
-1. Install and activate the plugin
-
-2. On wp-admin click on Products > Quick View menu item.
-
-3. Settings - apply to your whole site.
-
-4. Hover Position & Style tab - Use WYSIWYG setting if showing Quick View on mouse over image.
-
-5. Under Image Style tab - Use WYSISYG settings if showing Quick View the under image.
-
-6. Fancybox Pop-up - Us WYSIWYG setting if using this pop-up tool.
-
-7. Colorbox Pop-up - Us WYSIWYG settings if using this pop-up tool.
+* Install and activate the plugin
+* On wp-admin go to the WPEC Quick View Menu
+* Go to Quick View sub menu Settings - Turn the Quick View Feature ON.
+* Make your settings and style the Quick View Button or hypertext link.
+* Have fun.
 
 == Frequently Asked Questions ==
 
@@ -164,12 +171,21 @@ The manual installation method involves downloading our plugin and uploading it 
 
 On any WordPress install that has the WP e-Commerce plugin installed and activated and have Grid View activated.
 
-
 == Screenshots ==
 
 1. Quick view on a product page as it shows on a widescreen.
 
 == Changelog ==
+
+= 1.0.5 - 2014/05/23 =
+* Feature - Added option to show Quick View button or link text under image
+* Feature - Added full Quick View Button customization with the a3rev Button Creator functions - Create any style button.
+* Feature - Added Button transparency setting for Quick View hover button.
+* Feature - Added Under Image Button creator and Hyperlink styling functions.
+* Tweak - Moved the plugin from a sub menu item on the Product menu to its own WordPress Admin menu WPEC Quick View.
+* Tweak - Added all Custom Template Menus as a Sub menu of WPEC Quick View (Pro Version new feature)
+* Tweak - Updated the plugins description text with new features for Lite and Pro versions.
+* Tweak - Updated the plugins admin help text and yellow sidebar content.
 
 = 1.0.4 - 2014/05/12 =
 * Tweak - Removed dynamic pop-up wide setting and replaced with static pop-up max wide. 
@@ -217,6 +233,9 @@ On any WordPress install that has the WP e-Commerce plugin installed and activat
 * First working release
 
 == Upgrade Notifice ==
+
+= 1.0.5 =
+Upgrade now for new features. Full Button styling options. Quick View as button or Hyperlink text under product images.
 
 = 1.0.4 =
 Upgrade for full rework on Quick View pop-up. 2 bug fixes and 8 code Tweaks. Full backward compatibility with new WP e-Commerce version 3.8.14.1 and WordPress 3.9.1
