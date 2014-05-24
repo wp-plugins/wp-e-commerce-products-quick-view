@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 ?>
 <?php
 /*-----------------------------------------------------------------------------------
-WPEC Quick View ColorBox Popup Settings
+WPEC Quick View Custom Template Global Settings
 
 TABLE OF CONTENTS
 
@@ -28,13 +28,13 @@ TABLE OF CONTENTS
 
 -----------------------------------------------------------------------------------*/
 
-class WPEC_QV_ColorBox_Popup_Settings extends WPEC_QV_Admin_UI
+class WPEC_QV_Custom_Template_Global_Settings extends WPEC_QV_Admin_UI
 {
 	
 	/**
 	 * @var string
 	 */
-	private $parent_tab = 'popup-style';
+	private $parent_tab = 'settings';
 	
 	/**
 	 * @var array
@@ -45,19 +45,19 @@ class WPEC_QV_ColorBox_Popup_Settings extends WPEC_QV_Admin_UI
 	 * @var string
 	 * You must change to correct option name that you are working
 	 */
-	public $option_name = '';
+	public $option_name = 'wpec_quick_view_template_global_settings';
 	
 	/**
 	 * @var string
 	 * You must change to correct form key that you are working
 	 */
-	public $form_key = 'wpec_quick_view_colorbox_popup_settings';
+	public $form_key = 'wpec_quick_view_template_global_settings';
 	
 	/**
 	 * @var string
 	 * You can change the order show of this sub tab in list sub tabs
 	 */
-	private $position = 2;
+	private $position = 1;
 	
 	/**
 	 * @var array
@@ -78,18 +78,17 @@ class WPEC_QV_ColorBox_Popup_Settings extends WPEC_QV_Admin_UI
 		$this->subtab_init();
 		
 		$this->form_messages = array(
-				'success_message'	=> __( 'Color Box Pop Up Settings successfully saved.', 'wpecquickview' ),
-				'error_message'		=> __( 'Error: Color Box Pop Up Settings can not save.', 'wpecquickview' ),
-				'reset_message'		=> __( 'Color Box Pop Up Settings successfully reseted.', 'wpecquickview' ),
+				'success_message'	=> __( 'Global Settings successfully saved.', 'wpecquickview' ),
+				'error_message'		=> __( 'Error: Global Settings can not save.', 'wpecquickview' ),
+				'reset_message'		=> __( 'Global Settings successfully reseted.', 'wpecquickview' ),
 			);
 			
 		add_action( $this->plugin_name . '_set_default_settings' , array( $this, 'set_default_settings' ) );
-		
+				
 		add_action( $this->plugin_name . '-' . $this->form_key . '_settings_init' , array( $this, 'reset_default_settings' ) );
 		
 		//add_action( $this->plugin_name . '_get_all_settings' , array( $this, 'get_settings' ) );
 		
-		// Add yellow border for pro fields
 		add_action( $this->plugin_name . '-'. $this->form_key.'_settings_start', array( $this, 'pro_fields_before' ) );
 		add_action( $this->plugin_name . '-'. $this->form_key.'_settings_end', array( $this, 'pro_fields_after' ) );
 	}
@@ -148,9 +147,9 @@ class WPEC_QV_ColorBox_Popup_Settings extends WPEC_QV_Admin_UI
 	public function subtab_data() {
 		
 		$subtab_data = array( 
-			'name'				=> 'colorbox-pop-up',
-			'label'				=> __( 'Color Box Pop Up', 'wpecquickview' ),
-			'callback_function'	=> 'wpec_qv_colorbox_popup_settings_form',
+			'name'				=> 'settings',
+			'label'				=> __( 'Container Style', 'wpecquickview' ),
+			'callback_function'	=> 'wpec_qv_custom_template_global_settings_form',
 		);
 		
 		if ( $this->subtab_data ) return $this->subtab_data;
@@ -191,95 +190,61 @@ class WPEC_QV_ColorBox_Popup_Settings extends WPEC_QV_Admin_UI
 		
   		// Define settings			
      	$this->form_fields = apply_filters( $this->option_name . '_settings_fields', array(
-		
-			array(
-            	'name' 		=> __( 'Colour Box Pop Up', 'wpecquickview' ),
-                'type' 		=> 'heading',
-           	),
+			
 			array(  
-				'name' 		=> __( 'Pop-up Maximum Width', 'wpecquickview' ),
-				'id' 		=> 'wpec_quick_view_ultimate_colorbox_popup_width',
-				'desc'		=> 'px',
-				'type' 		=> 'slider',
-				'default'	=> 700,
-				'min'		=> 520,
-				'max'		=> 800,
-				'increment'	=> 10
+				'type'		=> 'heading'
 			),
 			array(  
-				'name' 		=> __( 'Pop-up Maximum Height', 'wpecquickview' ),
-				'id' 		=> 'wpec_quick_view_ultimate_colorbox_popup_height',
-				'desc'		=> 'px',
+				'name' 		=> __( 'Gallery Container Wide', 'wpecquickview' ),
+				'id' 		=> 'gallery_container_wide',
+				'desc'		=> '%',
 				'type' 		=> 'slider',
-				'default'	=> 500,
-				'min'		=> 300,
-				'max'		=> 500,
-				'increment'	=> 10
+				'default'	=> 50,
+				'min'		=> 30,
+				'max'		=> 70,
+				'increment'	=> 1
 			),
 			array(  
-				'name' 		=> __( "Fix Position on Scroll", 'wpecquickview' ),
-				'id' 		=> 'wpec_quick_view_ultimate_colorbox_center_on_scroll',
+				'name' 		=> __( 'Gallery Position', 'wpecquickview' ),
+				'id' 		=> 'gallery_position',
 				'type' 		=> 'onoff_radio',
-				'default'	=> 'true',
+				'default' 	=> 'left',
 				'onoff_options' => array(
 					array(
-						'val' 				=> 'true',
-						'text'				=> __( 'Pop-up stays centered in screen while page scrolls behind it.', 'wpecquickview' ) ,
-						'checked_label'		=> 'ON',
-						'unchecked_label' 	=> 'OFF',
+						'val' 				=> 'left',
+						'text' 				=> __( 'Left', 'wpecquickview' ),
+						'checked_label'		=> __( 'ON', 'wpecquickview') ,
+						'unchecked_label' 	=> __( 'OFF', 'wpecquickview') ,
 					),
-					
 					array(
-						'val' 				=> 'false',
-						'text' 				=> __( 'Pop-up scrolls up and down with the page.', 'wpecquickview' ) ,
-						'checked_label'		=> 'ON',
-						'unchecked_label' 	=> 'OFF',
-					) 
+						'val' 				=> 'right',
+						'text' 				=> __( 'Right', 'wpecquickview' ),
+						'checked_label'		=> __( 'ON', 'wpecquickview') ,
+						'unchecked_label' 	=> __( 'OFF', 'wpecquickview') ,
+					),
 				),
 			),
 			array(  
-				'name' 		=> __( 'Open & Close Transition Effect', 'wpecquickview' ),
-				'desc' 		=> __( "Choose a pop-up opening & closing effect. Default - None", 'wpecquickview' ),
-				'id' 		=> 'wpec_quick_view_ultimate_colorbox_transition',
-				'css' 		=> 'width:80px;',
-				'type' 		=> 'select',
-				'default'	=> 'none',
-				'options'	=> array(
-						'none'			=> __( 'None', 'wpecquickview' ) ,	
-						'fade'			=> __( 'Fade', 'wpecquickview' ) ,	
-						'elastic'		=> __( 'Elastic', 'wpecquickview' ) ,
-					),
-			),
-			array(  
-				'name' 		=> __( 'Opening & Closing Speed', 'wpecquickview' ),
-				'desc' 		=> __( 'Milliseconds when open and close popup', 'wpecquickview' ),
-				'id' 		=> 'wpec_quick_view_ultimate_colorbox_speed',
-				'type' 		=> 'text',
-				'css' 		=> 'width:40px;',
-				'default'	=> '300'
-			),
-			array(  
-				'name' 		=> __( 'Background Overlay Colour', 'wpecquickview' ),
-				'desc' 		=> __('Select a colour or empty for no colour.', 'wpecquickview'). ' ' . __('Default', 'wpecquickview'). ' [default_value]',
-				'id' 		=> 'wpec_quick_view_ultimate_colorbox_overlay_color',
+				'name' 		=> __( 'Pop-up Container Background Colour', 'wpecquickview' ),
+				'desc' 		=> __('Default', 'wpecquickview'). ' [default_value]',
+				'id' 		=> 'container_bg_color',
 				'type' 		=> 'color',
-				'default'	=> '#666666'
+				'default'	=> '#FFFFFF'
 			),
-			
         ));
 	}
 }
 
-global $wpec_qv_colorbox_popup_settings;
-$wpec_qv_colorbox_popup_settings = new WPEC_QV_ColorBox_Popup_Settings();
+global $wpec_qv_custom_template_global_settings;
+$wpec_qv_custom_template_global_settings = new WPEC_QV_Custom_Template_Global_Settings();
 
 /** 
- * wpec_qv_colorbox_popup_settings_form()
+ * wpec_qv_custom_template_global_settings_form()
  * Define the callback function to show subtab content
  */
-function wpec_qv_colorbox_popup_settings_form() {
-	global $wpec_qv_colorbox_popup_settings;
-	$wpec_qv_colorbox_popup_settings->settings_form();
+function wpec_qv_custom_template_global_settings_form() {
+	global $wpec_qv_custom_template_global_settings;
+	$wpec_qv_custom_template_global_settings->settings_form();
 }
 
 ?>
