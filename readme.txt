@@ -3,7 +3,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: WP e-Commerce, WP e-Commerce Quick View, Quick View, WP e-Commerce Products Quick View.
 Requires at least: 3.7
 Tested up to: 3.9.1
-Stable tag: 1.0.5
+Stable tag: 1.0.5.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -177,6 +177,11 @@ On any WordPress install that has the WP e-Commerce plugin installed and activat
 
 == Changelog ==
 
+= 1.0.5.1 - 2014/05/25 =
+* Tweak - Changed add_filter( 'gettext', array( $this, 'change_button_text' ), null, 2 ); to add_filter( 'gettext', array( $this, 'change_button_text' ), null, 3 );
+* Tweak - Update change_button_text() function from ( $original == 'Insert into Post' ) to ( is_admin() && $original === 'Insert into Post' )
+* Fix - Code tweaks to fix a3 Plugins Framework conflict with WP e-Commerce tax rates.
+
 = 1.0.5 - 2014/05/23 =
 * Feature - Added option to show Quick View button or link text under image
 * Feature - Added full Quick View Button customization with the a3rev Button Creator functions - Create any style button.
@@ -233,6 +238,9 @@ On any WordPress install that has the WP e-Commerce plugin installed and activat
 * First working release
 
 == Upgrade Notifice ==
+
+= 1.0.5.1 =
+Update now for a bug fix - a3 Plugin Framework conflict with WP e-Commerce tax rates.
 
 = 1.0.5 =
 Upgrade now for new features. Full Button styling options. Quick View as button or Hyperlink text under product images.

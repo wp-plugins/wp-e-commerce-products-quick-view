@@ -4,8 +4,8 @@
  */
 update_option('wpec_quick_view_ultimate_plugin', 'wpec_quick_view_ultimate');
 function wpec_quick_view_ultimate_install(){
-	update_option('wpec_quick_view_ultimate_version', '1.0.4');
-	update_option('wpec_quick_view_lite_version', '1.0.4');
+	update_option('wpec_quick_view_ultimate_version', '1.0.5.1');
+	update_option('wpec_quick_view_lite_version', '1.0.5.1');
 	
 	// Set Settings Default from Admin Init
 	global $wpec_qv_admin_init;
@@ -17,7 +17,7 @@ function wpec_quick_view_ultimate_install(){
 function wpec_quick_view_ultimate_init() {
 	if ( get_option('wpec_quick_view_ultimate_just_installed') ) {
 		delete_option('wpec_quick_view_ultimate_just_installed');
-		wp_redirect( admin_url( 'edit.php?post_type=wpsc-product&page=wpec-quick-view', 'relative' ) );
+		wp_redirect( admin_url( 'admin.php?page=wpec-quick-view', 'relative' ) );
 		exit;
 	}
 	load_plugin_textdomain( 'wpecquickview', false, WPEC_QV_ULTIMATE_FOLDER.'/languages' );
@@ -28,6 +28,9 @@ add_action('init', 'wpec_quick_view_ultimate_init');
 
 // Add custom style to dashboard
 add_action( 'admin_enqueue_scripts', array( 'WPEC_Quick_View_Ultimate', 'a3_wp_admin' ) );
+
+// Add admin sidebar menu css
+add_action( 'admin_enqueue_scripts', array( 'WPEC_Quick_View_Ultimate', 'admin_sidebar_menu_css' ) );
 
 // Add text on right of Visit the plugin on Plugin manager page
 add_filter( 'plugin_row_meta', array('WPEC_Quick_View_Ultimate', 'plugin_extra_links'), 10, 2 );
@@ -127,7 +130,7 @@ function wpec_quick_view_lite_upgrade_plugin () {
 		update_option('wpec_quick_view_ultimate_version', '1.0.1');
 	}
 	
-	update_option('wpec_quick_view_ultimate_version', '1.0.4');
-	update_option('wpec_quick_view_lite_version', '1.0.4');
+	update_option('wpec_quick_view_ultimate_version', '1.0.5.1');
+	update_option('wpec_quick_view_lite_version', '1.0.5.1');
 }
 ?>
