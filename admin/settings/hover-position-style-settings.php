@@ -84,14 +84,7 @@ class WPEC_QV_Hover_Position_Style_Settings extends WPEC_QV_Admin_UI
 			);
 			
 		add_action( $this->plugin_name . '_set_default_settings' , array( $this, 'set_default_settings' ) );
-		
-		add_action( $this->plugin_name . '-' . $this->form_key . '_settings_init' , array( $this, 'reset_default_settings' ) );
-		
 		//add_action( $this->plugin_name . '_get_all_settings' , array( $this, 'get_settings' ) );
-		
-		// Add yellow border for pro fields
-		add_action( $this->plugin_name . '_settings_pro_quick_view_ultimate_on_hover_bt_before', array( $this, 'pro_fields_before' ) );
-		add_action( $this->plugin_name . '_settings_pro_quick_view_ultimate_on_hover_bt_after', array( $this, 'pro_fields_after' ) );
 	}
 	
 	/*-----------------------------------------------------------------------------------*/
@@ -112,16 +105,6 @@ class WPEC_QV_Hover_Position_Style_Settings extends WPEC_QV_Admin_UI
 		global $wpec_qv_admin_interface;
 		
 		$wpec_qv_admin_interface->reset_settings( $this->form_fields, $this->option_name, false );
-	}
-	
-	/*-----------------------------------------------------------------------------------*/
-	/* reset_default_settings()
-	/* Reset default settings with function called from Admin Interface */
-	/*-----------------------------------------------------------------------------------*/
-	public function reset_default_settings() {
-		global $wpec_qv_admin_interface;
-		
-		$wpec_qv_admin_interface->reset_settings( $this->form_fields, $this->option_name, true, true );
 	}
 	
 	/*-----------------------------------------------------------------------------------*/
@@ -201,8 +184,7 @@ class WPEC_QV_Hover_Position_Style_Settings extends WPEC_QV_Admin_UI
 				'desc' 		=> __('Text for Quick View Button Show On Hover', 'wpecquickview'),
 				'id' 		=> 'wpec_quick_view_ultimate_on_hover_bt_text',
 				'type' 		=> 'text',
-				'default'	=> __('QUICKVIEW', 'wpecquickview'),
-				'free_version'		=> true,
+				'default'	=> __('QUICKVIEW', 'wpecquickview')
 			),
 			array(  
 				'name' 		=> __( 'Button Align', 'wpecquickview' ),
@@ -210,18 +192,12 @@ class WPEC_QV_Hover_Position_Style_Settings extends WPEC_QV_Admin_UI
 				'css' 		=> 'width:80px;',
 				'type' 		=> 'select',
 				'default'	=> 'center',
-				'free_version'		=> true,
 				'options'	=> array(
 						'top'			=> __( 'Top', 'wpecquickview' ) ,	
 						'center'		=> __( 'Center', 'wpecquickview' ) ,	
 						'bottom'		=> __( 'Bottom', 'wpecquickview' ) ,	
 					),
 			),
-			array(
-            	'name' => '',
-				'id'	=> 'pro_quick_view_ultimate_on_hover_bt',
-                'type' => 'heading',
-           	),
 			array(  
 				'name' => __( 'Button Padding', 'wpecquickview' ),
 				'desc' 		=> __( 'Padding from Button text to Button border Show On Hover', 'wpecquickview' ),
