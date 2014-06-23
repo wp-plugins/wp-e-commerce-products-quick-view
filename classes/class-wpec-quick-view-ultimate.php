@@ -329,13 +329,8 @@ class WPEC_Quick_View_Ultimate
 		$html .= '<h3>'.__('Upgrade to WPEC Quick View Ultimate', 'wpecquickview').'</h3>';
 		$html .= '<p>'.__("<strong>NOTE:</strong> All the functions inside the Yellow border on the plugins admin panel are extra functionality that is activated by upgrading to the Pro version", 'wpecquickview').':</p>';
 		$html .= '<p>';
-		$html .= '<h3 style="margin-bottom:5px;">* <a href="'.WPEC_QV_ULTIMATE_AUTHOR_URI.'" target="_blank">'.__('WPEC Quick View Ultimate', 'wpecquickview').'</a></h3>';
-		$html .= '<p>';
-		$html .= '* '. sprintf( __('Trial the <a href="%s" target="_blank">Pro Version for Free</a>', 'wpecquickview'), 'http://a3rev.com/shop/wp-e-commerce-quick-view-ultimate' ).'<br />';
-		$html .= '* '. __('No credit card required.', 'wpecquickview').'<br />';
-		$html .= '* '. __('Immediate access to developer support.', 'wpecquickview');
-		$html .= '</p>';
-		$html .= '<div><strong>'.__('Activates these advanced Features', 'wpecquickview').':</strong></div>';
+		
+		$html .= '<h3>* <a href="'.WPEC_QV_ULTIMATE_AUTHOR_URI.'" target="_blank">'.__('WPEC Quick View Ultimate', 'wpecquickview').'</a> '.__('Features', 'wpecquickview').':</h3>';
 		$html .= '<p>';
 		$html .= '<ul style="padding-left:10px;">';
 		$html .= '<li>1. '.__("Quick View Custom Template for pop-up.", 'wpecquickview').'</li>';

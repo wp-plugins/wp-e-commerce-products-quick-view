@@ -2,7 +2,7 @@
 /*
 Plugin Name: WP e-Commerce Products Quick View
 Description: This plugin adds the ultimate Quick View feature to your stores Product page, Product category and Product tags listings. Opens the full pages content - add to cart, view cart and click to cloase and keep browsing your store.
-Version: 1.0.5.1
+Version: 1.0.5.2
 Author: A3 Revolution
 Author URI: http://www.a3rev.com/
 License: This software is under commercial license and copyright to A3 Revolution Software Development team

@@ -3,7 +3,7 @@ Contributors: a3rev, A3 Revolution Software Development team
 Tags: WP e-Commerce, WP e-Commerce Quick View, Quick View, WP e-Commerce Products Quick View.
 Requires at least: 3.7
 Tested up to: 3.9.1
-Stable tag: 1.0.5.1
+Stable tag: 1.0.5.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -80,18 +80,16 @@ We wanted our customers to have a true supermarket shopping experience. Other Qu
 * We do not watch that forum and posting there you will be relying on another user for support, not an a3rev team member. 
 * Upgrading to a Pro Version Licence gives 'write' access to the a3rev support forum.
 
+>= Premium Support = 
+>
+>The a3rev team does not provide support for the WP e-Commerce Products Quick View plugin on the WordPress.org forums. One on one developer support is available via the plugins a3rev [support forum](https://a3rev.com/forums/forum/wp-e-commerce-plugins/quick-view-ultimate/) to people who have purchased a [WP e-Commerce Quick View Ultimate](http://a3rev.com/shop/wp-e-commerce-quick-view-ultimate/) plugin Lifetime License. 
+>
+>The Pro Version has lots of extra features that coupled with developer support might be well worth your investment!
+
 = Pro Version Upgrade =
 
 This plugin has a Pro Version upgrade that adds more functionality to this Free version. You will see all of the available upgrade features on the plugins admin panel, in the Yellow sidebar. Those Pro features include:
 
-= Free Trial Evaluation =
-
-* Try the [full Pro Version for free](http://a3rev.com/shop/wp-e-commerce-quick-view-ultimate/).
-* a3rev try before you buy
-* No credit card required. 
-* 60 day no qusetions asked money back guarantee on all licenses upgraded from trail to Lifetime Licenses.
-* Add additional sites to a Lifetime License when you require them at a 30% discount.
-* Immediate access to developer support from the plugins a3rev support forum.
  
 = Fully Customizable Pop-up Template =
 
@@ -177,6 +175,11 @@ On any WordPress install that has the WP e-Commerce plugin installed and activat
 
 == Changelog ==
 
+= 1.0.5.2 - 2014/06/23 =
+* Tweak - Updated chosen js script to latest version 1.0.1 on the a3rev Plugin Framework 
+* Tweak - Added support for placeholder feature for input, email , password , text area types
+* Tweak - Convert Lifetime License to single site purchase with add sites at discount feature.
+
 = 1.0.5.1 - 2014/05/25 =
 * Tweak - Changed add_filter( 'gettext', array( $this, 'change_button_text' ), null, 2 ); to add_filter( 'gettext', array( $this, 'change_button_text' ), null, 3 );
 * Tweak - Update change_button_text() function from ( $original == 'Insert into Post' ) to ( is_admin() && $original === 'Insert into Post' )
@@ -238,6 +241,9 @@ On any WordPress install that has the WP e-Commerce plugin installed and activat
 * First working release
 
 == Upgrade Notifice ==
+
+= 1.0.5.2 =
+Update now for 3 important framework code tweaks.
 
 = 1.0.5.1 =
 Update now for a bug fix - a3 Plugin Framework conflict with WP e-Commerce tax rates.
