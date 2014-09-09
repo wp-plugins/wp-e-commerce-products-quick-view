@@ -2,7 +2,7 @@
 /*
 Plugin Name: WP e-Commerce Products Quick View
 Description: This plugin adds the ultimate Quick View feature to your stores Product page, Product category and Product tags listings. Opens the full pages content - add to cart, view cart and click to cloase and keep browsing your store.
-Version: 1.0.3
+Version: 1.0.5.2
 Author: A3 Revolution
 Author URI: http://www.a3rev.com/
 License: This software is under commercial license and copyright to A3 Revolution Software Development team
@@ -28,7 +28,7 @@ define('WPEC_QV_ULTIMATE_TEMPLATE_PATH', WPEC_QV_ULTIMATE_FILE_PATH . '/template
 define('WPEC_QV_ULTIMATE_IMAGES_URL',  WPEC_QV_ULTIMATE_URL . '/assets/images' );
 define('WPEC_QV_ULTIMATE_JS_URL',  WPEC_QV_ULTIMATE_URL . '/assets/js' );
 define('WPEC_QV_ULTIMATE_CSS_URL',  WPEC_QV_ULTIMATE_URL . '/assets/css' );
-define('WPEC_QV_ULTIMATE_WP_TESTED', '3.8.0' );
+define('WPEC_QV_ULTIMATE_WP_TESTED', '3.9.1' );
 if(!defined("WPEC_QV_ULTIMATE_AUTHOR_URI"))
     define("WPEC_QV_ULTIMATE_AUTHOR_URI", "http://a3rev.com/shop/wp-e-commerce-quick-view-ultimate/");
 	
@@ -39,6 +39,7 @@ include('admin/admin-ui.php');
 include('admin/admin-interface.php');
 
 include('admin/admin-pages/admin-quick-view-page.php');
+include('admin/admin-pages/admin-custom-template-page.php');
 
 include('admin/admin-init.php');
 	
@@ -91,7 +92,8 @@ function wpec_quick_view_lite_uninstall(){
 		delete_option( 'wpec_quick_view_ultimate_under_image_bt_class' );
 		
 		// Delete Fancy Box Pop Up Settings
-		delete_option( 'wpec_quick_view_ultimate_fancybox_popup_tool_wide' );
+		delete_option( 'wpec_quick_view_ultimate_fancybox_popup_width' );
+		delete_option( 'wpec_quick_view_ultimate_fancybox_popup_height' );
 		delete_option( 'wpec_quick_view_ultimate_fancybox_center_on_scroll' );
 		delete_option( 'wpec_quick_view_ultimate_fancybox_transition_in' );
 		delete_option( 'wpec_quick_view_ultimate_fancybox_transition_out' );
@@ -100,11 +102,23 @@ function wpec_quick_view_lite_uninstall(){
 		delete_option( 'wpec_quick_view_ultimate_fancybox_overlay_color' );
 		
 		// Delete Colour Box Pop Up Settings
-		delete_option( 'wpec_quick_view_ultimate_colorbox_popup_tool_wide' );
+		delete_option( 'wpec_quick_view_ultimate_colorbox_popup_width' );
+		delete_option( 'wpec_quick_view_ultimate_colorbox_popup_height' );
 		delete_option( 'wpec_quick_view_ultimate_colorbox_center_on_scroll' );
 		delete_option( 'wpec_quick_view_ultimate_colorbox_transition' );
 		delete_option( 'wpec_quick_view_ultimate_colorbox_speed' );
 		delete_option( 'wpec_quick_view_ultimate_colorbox_overlay_color' );
+		
+		delete_option( 'wpec_quick_view_template_addtocart_settings' );
+		delete_option( 'wpec_quick_view_template_control_settings' );
+		delete_option( 'wpec_quick_view_template_gallery_style_settings' );
+		delete_option( 'wpec_quick_view_template_global_settings' );
+		delete_option( 'wpec_quick_view_template_product_description_settings' );
+		delete_option( 'wpec_quick_view_template_product_meta_settings' );
+		delete_option( 'wpec_quick_view_template_product_price_settings' );
+		delete_option( 'wpec_quick_view_template_product_rating_settings' );
+		delete_option( 'wpec_quick_view_template_product_title_settings' );
+		delete_option( 'wpec_quick_view_template_gallery_thumbnails_settings' );
 		
 		delete_option( 'wpec_quick_view_lite_clean_on_deletion' );
 	}

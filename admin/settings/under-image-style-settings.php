@@ -86,14 +86,7 @@ class WPEC_QV_Under_Image_Style_Settings extends WPEC_QV_Admin_UI
 		add_action( $this->plugin_name . '-' . $this->parent_tab . '_tab_end', array( $this, 'include_script' ) );
 			
 		add_action( $this->plugin_name . '_set_default_settings' , array( $this, 'set_default_settings' ) );
-		
-		add_action( $this->plugin_name . '-' . $this->form_key . '_settings_init' , array( $this, 'reset_default_settings' ) );
-		
 		//add_action( $this->plugin_name . '_get_all_settings' , array( $this, 'get_settings' ) );
-		
-		// Add yellow border for pro fields
-		add_action( $this->plugin_name . '-'. $this->form_key.'_settings_start', array( $this, 'pro_fields_before' ) );
-		add_action( $this->plugin_name . '-'. $this->form_key.'_settings_end', array( $this, 'pro_fields_after' ) );
 	}
 	
 	/*-----------------------------------------------------------------------------------*/
@@ -114,16 +107,6 @@ class WPEC_QV_Under_Image_Style_Settings extends WPEC_QV_Admin_UI
 		global $wpec_qv_admin_interface;
 		
 		$wpec_qv_admin_interface->reset_settings( $this->form_fields, $this->option_name, false );
-	}
-	
-	/*-----------------------------------------------------------------------------------*/
-	/* reset_default_settings()
-	/* Reset default settings with function called from Admin Interface */
-	/*-----------------------------------------------------------------------------------*/
-	public function reset_default_settings() {
-		global $wpec_qv_admin_interface;
-		
-		$wpec_qv_admin_interface->reset_settings( $this->form_fields, $this->option_name, true, true );
 	}
 	
 	/*-----------------------------------------------------------------------------------*/
