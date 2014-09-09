@@ -2,8 +2,8 @@
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: WP e-Commerce, WP e-Commerce Quick View, Quick View, WP e-Commerce Products Quick View.
 Requires at least: 3.7
-Tested up to: 3.9.1
-Stable tag: 1.0.5.2
+Tested up to: 4.0
+Stable tag: 1.0.5.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -175,6 +175,11 @@ On any WordPress install that has the WP e-Commerce plugin installed and activat
 
 == Changelog ==
 
+= 1.0.5.3 - 2014/09/09 =
+* Tweak - Updated google font face in plugin framework.
+* Tweak - Tested 100% compatible with WP e-Commerce 3.8.14.3
+* Tweak - Tested 100% compatible with WordPress Version 4.0
+
 = 1.0.5.2 - 2014/06/23 =
 * Tweak - Updated chosen js script to latest version 1.0.1 on the a3rev Plugin Framework 
 * Tweak - Added support for placeholder feature for input, email , password , text area types
@@ -240,7 +245,10 @@ On any WordPress install that has the WP e-Commerce plugin installed and activat
 = 1.0.0 - 2013/08/05 =
 * First working release
 
-== Upgrade Notifice ==
+== Upgrade Notice ==
+
+= 1.0.5.3 =
+Upgrade your plugin now for full compatibility with WordPress Version 4.0 and WP e-Commerce Version 3.8.14.3
 
 = 1.0.5.2 =
 Update now for 3 important framework code tweaks.
