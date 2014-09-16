@@ -91,9 +91,10 @@ class WPEC_Quick_View_Ultimate
 		$do_this = false;
 		if( $wpec_quick_view_ultimate_enable == '1' ) $do_this = true;
 		if( !$do_this ) return;
+
+		$_upload_dir = wp_upload_dir();
 		wp_enqueue_style( 'wpec-quick-view-css', WPEC_QV_ULTIMATE_CSS_URL.'/style.css');
-		WPEC_Quick_View_Ultimate_Style::button_style_under_image();
-		WPEC_Quick_View_Ultimate_Style::button_style_show_on_hover();
+		wp_enqueue_style( 'wpec-quick-view-button-css', $_upload_dir['baseurl'] . '/sass/wpec_quick_view_button.min.css');
 	}
 	
 	public function wpec_add_quick_view_button_default_template(){
