@@ -223,7 +223,6 @@ class WPEC_QV_Global_Settings extends WPEC_QV_Admin_UI
 			),
 			array(
             	'name' => __( 'Set Display Type', 'wpecquickview' ),
-				'id'	=> 'pro_quick_view_ultimate_type',
                 'type' => 'heading',
            	),
 			array(  
@@ -231,6 +230,7 @@ class WPEC_QV_Global_Settings extends WPEC_QV_Admin_UI
 				'id' 		=> 'wpec_quick_view_ultimate_type',
 				'type' 		=> 'onoff_radio',
 				'default'	=> 'hover',
+				'free_version'		=> true,
 				'onoff_options' => array(
 					array(
 						'val' 				=> 'hover',
@@ -249,6 +249,7 @@ class WPEC_QV_Global_Settings extends WPEC_QV_Admin_UI
 			),
 			array(
             	'name' => __( 'Select a Pop Up Tool', 'wpecquickview' ),
+		'id'	=> 'pro_quick_view_ultimate_type',
                 'type' => 'heading',
            	),
 			array(  
@@ -268,13 +269,28 @@ class WPEC_QV_Global_Settings extends WPEC_QV_Admin_UI
                 'type' => 'heading',
            	),
 			array(  
+				'name' 		=> __( "Custom Template Pop-up", 'wpecquickview' ),
+				'id' 		=> 'wpec_quick_view_ultimate_popup_content',
+				'type' 		=> 'onoff_radio',
+				'default'	=> 'full_page',
+				'onoff_options' => array(
+					array(
+						'val' 				=> 'custom_template',
+						'text' 				=> __( 'Use the Custom Template for pop-up with Dynamic product image gallery, view Next&gt; &lt;Previous product in the pop-up.', 'wpecquickview' ).' <span class="description">('.__( 'recommended', 'wpecquickview' ).')</span>' ,
+						'checked_label'		=> 'ON',
+						'unchecked_label' 	=> 'OFF',
+					),
+				),
+			),
+			array(  
 				'name' 		=> __( 'Site Product Page', 'wpecquickview' ),
 				'id' 		=> 'wpec_quick_view_ultimate_popup_content',
 				'type' 		=> 'onoff_radio',
+				'default'	=> 'full_page',
 				'onoff_options' => array(
 					array(
 						'val' 				=> 'full_page',
-						'text' 				=> __( 'Open full site in pop-up', 'wpecquickview' ) .' <span class="description">('.__( 'recommended', 'wpecquickview' ).')</span>' ,
+						'text' 				=> __( 'Open full site in pop-up', 'wpecquickview' )  . ' - <span style="color:red">' . __( 'The only Activated Option in Lite Version!', 'wpecquickview' ) . '</span>' ,
 						'checked_label'		=> 'ON',
 						'unchecked_label' 	=> 'OFF',
 					),
@@ -284,7 +300,7 @@ class WPEC_QV_Global_Settings extends WPEC_QV_Admin_UI
 				'name' 		=> __( "Product Page Content", 'wpecquickview' ),
 				'id' 		=> 'wpec_quick_view_ultimate_popup_content',
 				'type' 		=> 'onoff_radio',
-				'default'	=> 'product_page',
+				'default'	=> 'full_page',
 				'onoff_options' => array(
 					array(
 						'val' 				=> 'product_page',
