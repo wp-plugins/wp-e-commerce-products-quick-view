@@ -32,6 +32,20 @@ class WPEC_QV_Admin_UI
 	 */
 	public $plugin_name = 'wpec_quick_view_ultimate';
 	
+	public $is_free_plugin = true;
+	
+	/**
+	 * @var string
+	 * You must change to correct class name that you are working
+	 */
+	public $class_name = 'WPEC_Quick_View_Ultimate';
+	
+	/**
+	 * @var string
+	 * You must change to correct pro plugin page url on a3rev site
+	 */
+	public $pro_plugin_page_url = 'http://a3rev.com/shop/wp-e-commerce-quick-view-ultimate/';
+	
 	/**
 	 * @var string
 	 */
@@ -113,11 +127,32 @@ class WPEC_QV_Admin_UI
 	}
 	
 	/*-----------------------------------------------------------------------------------*/
+	/* upgrade_top_message() */
+	/* Show upgrade top message for pro fields
+	/*-----------------------------------------------------------------------------------*/
+	public function upgrade_top_message( $echo = false, $setting_id = '' ) {
+		$upgrade_top_message = sprintf( '<div class="pro_feature_top_message">' 
+			. __( 'Advanced settings inside this yellow border are not activated on the Lite Version.', 'wpecquickview' ) 
+			. '<br />' 
+			. __( 'Upgrade to the <a href="%s" target="_blank">%s</a> to activate these settings.', 'wpecquickview' ) 
+			. '</div>'
+			, apply_filters( $this->plugin_name . '_' . $setting_id . '_pro_plugin_page_url', apply_filters( $this->plugin_name . '_pro_plugin_page_url', $this->pro_plugin_page_url ) )
+			, apply_filters( $this->plugin_name . '_' . $setting_id . '_pro_version_name', apply_filters( $this->plugin_name . '_pro_version_name', __( 'Pro Version', 'wpecquickview' ) ) )
+		);
+		
+		$upgrade_top_message = apply_filters( $this->plugin_name . '_upgrade_top_message', $upgrade_top_message );
+		
+		if ( $echo ) echo $upgrade_top_message;
+		else return $upgrade_top_message;
+		
+	}
+	
+	/*-----------------------------------------------------------------------------------*/
 	/* pro_fields_before() */
 	/* Start of yellow box on right for pro fields
 	/*-----------------------------------------------------------------------------------*/
 	public function pro_fields_before( $echo = true ) {
-		echo apply_filters( $this->plugin_name . '_pro_fields_before', '<div class="pro_feature_fields">' );
+		echo apply_filters( $this->plugin_name . '_pro_fields_before', '<div class="pro_feature_fields">'. $this->upgrade_top_message() );
 	}
 	
 	/*-----------------------------------------------------------------------------------*/

@@ -57,18 +57,34 @@ class WPEC_QV_Admin_Page extends WPEC_QV_Admin_UI
 	/*-----------------------------------------------------------------------------------*/
 	public function page_data() {
 		
-		$page_data = array(
-			'type'				=> 'submenu',
-			'parent_slug'		=> 'edit.php?post_type=wpsc-product',
-			'page_title'		=> __( 'Quick View', 'wpecquickview' ),
-			'menu_title'		=> __( 'Quick View', 'wpecquickview' ),
-			'capability'		=> 'manage_options',
-			'menu_slug'			=> $this->menu_slug,
-			'function'			=> 'wpec_qv_admin_page_show',
-			'admin_url'			=> 'edit.php?post_type=wpsc-product',
-			'callback_function' => '',
-			'script_function' 	=> '',
-			'view_doc'			=> '',
+		$page_data = array( 
+			array(
+				'type'				=> 'menu',
+				'page_title'		=> __( 'WPEC Quick View', 'wpecquickview' ),
+				'menu_title'		=> __( 'WPEC Quick View', 'wpecquickview' ),
+				'capability'		=> 'manage_options',
+				'menu_slug'			=> $this->menu_slug,
+				'function'			=> 'wpec_qv_admin_page_show',
+				'icon_url'			=> '',
+				'position'			=> '30.34537',
+				'admin_url'			=> 'admin.php',
+				'callback_function' => '',
+				'script_function' 	=> '',
+				'view_doc'			=> '',
+			),
+			array(
+				'type'				=> 'submenu',
+				'parent_slug'		=> $this->menu_slug,
+				'page_title'		=> __( 'Quick View', 'wpecquickview' ),
+				'menu_title'		=> __( 'Quick View', 'wpecquickview' ),
+				'capability'		=> 'manage_options',
+				'menu_slug'			=> $this->menu_slug,
+				'function'			=> 'wpec_qv_admin_page_show',
+				'admin_url'			=> 'admin.php',
+				'callback_function' => '',
+				'script_function' 	=> '',
+				'view_doc'			=> '',
+			),
 		);
 		
 		if ( $this->page_data ) return $this->page_data;
@@ -83,7 +99,7 @@ class WPEC_QV_Admin_Page extends WPEC_QV_Admin_UI
 	public function add_admin_menu( $admin_menu ) {
 		
 		if ( ! is_array( $admin_menu ) ) $admin_menu = array();
-		$admin_menu[] = $this->page_data();
+		$admin_menu = array_merge( $this->page_data(), $admin_menu );
 		
 		return $admin_menu;
 	}
@@ -107,7 +123,9 @@ class WPEC_QV_Admin_Page extends WPEC_QV_Admin_UI
 	public function admin_settings_page() {
 		global $wpec_qv_admin_init;
 		
-		$wpec_qv_admin_init->admin_settings_page( $this->page_data() );
+		$my_page_data = $this->page_data();
+		$my_page_data = array_values( $my_page_data );
+		$wpec_qv_admin_init->admin_settings_page( $my_page_data[1] );
 	}
 	
 }
