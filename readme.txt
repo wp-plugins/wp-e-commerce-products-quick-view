@@ -2,8 +2,8 @@
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: WP e-Commerce, WP e-Commerce Quick View, Quick View, WP e-Commerce Products Quick View.
 Requires at least: 3.8
-Tested up to: 4.2.0
-Stable tag: 1.1.1
+Tested up to: 4.2.1
+Stable tag: 1.1.2
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -187,6 +187,10 @@ On any WordPress install that has the WP e-Commerce plugin installed and activat
 
 == Changelog ==
 
+= 1.1.2 - 2015/05/06 =
+* Tweak - Tested for full compatibility with WordPress Version 4.2.1
+* Fix - Removed check_ajax_referer() call on frontend for compatibility with PHP caching plugins. Was returning -1 to js success call-back.
+
 = 1.1.1 - 2015/04/24 =
 * Tweak - Tested and Tweaked for full compatibility with WordPress Version 4.2.0
 * Tweak - Tested and Tweaked for full compatibility with WP e-Commerce Version 3.9.3
@@ -271,6 +275,9 @@ On any WordPress install that has the WP e-Commerce plugin installed and activat
 * First working release
 
 == Upgrade Notice ==
+
+= 1.1.2 =
+Maintenance Update. 1 Bug fix for full compatibility with PHP caching plugins and full compatibility with WordPress version 4.2.1
 
 = 1.1.1 =
 Major Maintenance Update. Code tweaks and a bug fix for full compatibility with WordPress Version 4.2.0 and WP e-Commerce Version 3.9.3

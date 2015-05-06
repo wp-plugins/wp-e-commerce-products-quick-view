@@ -299,7 +299,6 @@ class WPEC_Quick_View_Ultimate
 	
 	public function wpec_quick_view_ultimate_reload_cart() {
 		global $wpsc_cart;
-		check_ajax_referer( 'reload-cart', 'security' );
 		include_once( wpsc_get_template_file_path( 'wpsc-cart_widget.php' ) );
 		die();
 	}
