@@ -2,8 +2,8 @@
 Contributors: a3rev, A3 Revolution Software Development team
 Tags: WP e-Commerce, WP e-Commerce Quick View, Quick View, WP e-Commerce Products Quick View.
 Requires at least: 3.8
-Tested up to: 4.2.1
-Stable tag: 1.1.2
+Tested up to: 4.2.2
+Stable tag: 1.1.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -187,6 +187,12 @@ On any WordPress install that has the WP e-Commerce plugin installed and activat
 
 == Changelog ==
 
+= 1.1.3 - 2015/06/03 =
+* Tweak - Tested for full compatibility with WordPress Version 4.2.2
+* Tweak - Security Hardening. Removed all php file_put_contents functions in the plugin framework and replace with the WP_Filesystem API
+* Tweak - Security Hardening. Removed all php file_get_contents functions in the plugin framework and replace with the WP_Filesystem API
+* Fix - Update dynamic stylesheet url in uploads folder to the format //domain.com/ so it's always is correct when loaded as http or https
+
 = 1.1.2 - 2015/05/06 =
 * Tweak - Tested for full compatibility with WordPress Version 4.2.1
 * Fix - Removed check_ajax_referer() call on frontend for compatibility with PHP caching plugins. Was returning -1 to js success call-back.
@@ -275,6 +281,9 @@ On any WordPress install that has the WP e-Commerce plugin installed and activat
 * First working release
 
 == Upgrade Notice ==
+
+= 1.1.3 =
+Important Maintenance Upgrade. 2 x major a3rev Plugin Framework Security Hardening Tweaks plus 1 https bug fix and full compatibility with WordPress 4.2.2
 
 = 1.1.2 =
 Maintenance Update. 1 Bug fix for full compatibility with PHP caching plugins and full compatibility with WordPress version 4.2.1

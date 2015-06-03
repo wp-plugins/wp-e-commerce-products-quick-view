@@ -94,7 +94,7 @@ class WPEC_Quick_View_Ultimate
 
 		$_upload_dir = wp_upload_dir();
 		wp_enqueue_style( 'wpec-quick-view-css', WPEC_QV_ULTIMATE_CSS_URL.'/style.css');
-		wp_enqueue_style( 'wpec-quick-view-button-css', $_upload_dir['baseurl'] . '/sass/wpec_quick_view_button.min.css');
+		wp_enqueue_style( 'wpec-quick-view-button-css', str_replace(array('http:','https:'), '', $_upload_dir['baseurl'] ) . '/sass/wpec_quick_view_button.min.css');
 	}
 	
 	public function wpec_add_quick_view_button_default_template(){
