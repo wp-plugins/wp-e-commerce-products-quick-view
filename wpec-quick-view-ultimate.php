@@ -2,7 +2,7 @@
 /*
 Plugin Name: WP e-Commerce Products Quick View
 Description: This plugin adds the ultimate Quick View feature to your stores Product page, Product category and Product tags listings. Opens the full pages content - add to cart, view cart and click to cloase and keep browsing your store.
-Version: 1.1.0
+Version: 1.1.2
 Author: A3 Revolution
 Author URI: http://www.a3rev.com/
 License: This software is under commercial license and copyright to A3 Revolution Software Development team
@@ -22,13 +22,12 @@ define('WPEC_QV_ULTIMATE_FILE_PATH', dirname(__FILE__));
 define('WPEC_QV_ULTIMATE_DIR_NAME', basename(WPEC_QV_ULTIMATE_FILE_PATH));
 define('WPEC_QV_ULTIMATE_FOLDER', dirname(plugin_basename(__FILE__)));
 define('WPEC_QV_ULTIMATE_URL', untrailingslashit(plugins_url('/', __FILE__)));
-define('WPEC_QV_ULTIMATE_DIR', WP_CONTENT_DIR . '/plugins/' . WPEC_QV_ULTIMATE_FOLDER);
+define('WPEC_QV_ULTIMATE_DIR', WP_PLUGIN_DIR . '/' . WPEC_QV_ULTIMATE_FOLDER);
 define('WPEC_QV_ULTIMATE_NAME', plugin_basename(__FILE__));
 define('WPEC_QV_ULTIMATE_TEMPLATE_PATH', WPEC_QV_ULTIMATE_FILE_PATH . '/templates');
 define('WPEC_QV_ULTIMATE_IMAGES_URL', WPEC_QV_ULTIMATE_URL . '/assets/images');
 define('WPEC_QV_ULTIMATE_JS_URL', WPEC_QV_ULTIMATE_URL . '/assets/js');
 define('WPEC_QV_ULTIMATE_CSS_URL', WPEC_QV_ULTIMATE_URL . '/assets/css');
-define('WPEC_QV_ULTIMATE_WP_TESTED', '4.0');
 if (!defined("WPEC_QV_ULTIMATE_AUTHOR_URI")) define("WPEC_QV_ULTIMATE_AUTHOR_URI", "http://a3rev.com/shop/wp-e-commerce-quick-view-ultimate/");
 
 if (!defined("WPEC_QV_ULTIMATE_DOCS_URI")) define("WPEC_QV_ULTIMATE_DOCS_URI", "http://docs.a3rev.com/user-guides/plugins-extensions/wp-e-commerce/wpec-quick-view/");
